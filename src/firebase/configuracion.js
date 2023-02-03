@@ -138,7 +138,7 @@ export const onAuth = (auth) => {
   auth.onAuthStateChanged((user) => {
     if (user) {
       console.log('user is signed in');
-      const uid = user.uid;
+      // const uid = user.uid;
     } else {
       console.log('user is signed out');
     }
@@ -166,6 +166,7 @@ export const dislike = (id, oldLike) => {
 };
 
 export {
+  createUserWithEmailAndPassword,
   collection,
   addDoc,
   getDocs,
