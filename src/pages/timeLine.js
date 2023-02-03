@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-cycle */
 import { signOutFirebase, auth } from '../firebase/configuracion.js';
-
 export const timeLine = () => {
   const divTimeLine = document.createElement('div');
   divTimeLine.setAttribute('class', 'container-div-timeLine');
