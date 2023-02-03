@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable import/no-cycle */
 import { signOutFirebase, auth } from '../firebase/configuracion.js';
+
 export const timeLine = () => {
   const divTimeLine = document.createElement('div');
   divTimeLine.setAttribute('class', 'container-div-timeLine');
@@ -23,7 +25,6 @@ export const timeLine = () => {
            <li class="li-navbar-logout"> <img id="log-out" class="navbar-img" src="./images/log-out.png" alt="log-out"> </li>
         </a>
     </nav>
-
     <nav class="navbar-desktop" id="navbar-desktop">
         <a href="/timeLine">
             <li class="li-navbar"> Timeline </li>
@@ -35,7 +36,6 @@ export const timeLine = () => {
             <li class="li-navbar-logout" id="li-navbar-logout"> Cerrar sesión </li>
         </a>
     </nav>
-
     <section class="seccion-publicar">
         <div class="contenedor-publicaciones">
             <picture>  <img class="user-logo-publicaciones" src="./images/user.png" alt=""> </picture>
@@ -53,7 +53,6 @@ export const timeLine = () => {
         <div class="contenedor-publicaciones2" id="contenedor-publicaciones">
     </div>
     </section>
-
     
 `;
   divTimeLine.innerHTML = viewTimeLine;

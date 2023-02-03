@@ -1,3 +1,6 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-console */
 // import { async } from 'regenerator-runtime';
 import {
   saveTask, deleteTask, getTask, updateTask, tapLike, dislike, user, auth, dateTask,
@@ -29,6 +32,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       };
       likeImg();
+
+      // console.log(auth.currentUser);
 
       html += `
                 <div class = 'contenedor-padre'> 
@@ -66,13 +71,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     botonLike.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const id1 = e.target.dataset.id;
-        // console.log('id', id1);
+        console.log('id', id1);
         const doc = await getTask(id1);
-        // console.log('doc', doc);
+        console.log('doc', doc);
         const likes = doc.data().likes;
         const currentLike = likes.indexOf(userId);
 
-        // console.log(likes);
+        console.log(likes);
         if (currentLike === -1) {
           tapLike(id1, userId);
         } else {
@@ -94,7 +99,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsEdit.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const doc = await getTask(e.target.dataset.id);
-        // console.log(doc.data());
+        console.log(doc.data());
         const task = doc.data();
 
         taskForm['task-description'].value = task.description;
@@ -114,7 +119,6 @@ taskForm.addEventListener('submit', (e) => {
   const description = taskForm['task-description'];
 
   if (description.value.trim() === '') {
-    // eslint-disable-next-line no-alert
     alert('No se pueden publicar campos vacíos :(');
   } else {
     if (!editStatus) {
