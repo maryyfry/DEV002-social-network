@@ -130,7 +130,7 @@ export const authGoogle = async () => {
   }
 };
 
-// Cerrar sesión
+// Cerrar sesión y se ve el console log
 
 export const signOutFirebase = (auth) => auth.signOut();
 
