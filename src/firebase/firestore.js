@@ -5,14 +5,11 @@ import {
 
 const tasksContainer = document.getElementById('contenedor-publicaciones');
 const taskForm = document.getElementById('task-form');
-
 let editStatus = false;
 let id = '';
-
 window.addEventListener('DOMContentLoaded', async () => {
   dateTask((querySnapshot) => {
     let html = '';
-
     querySnapshot.forEach((doc) => {
       const task = doc.data();
       // const fecha=Timestamp.fromDate(new Date())
@@ -29,26 +26,24 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       };
       likeImg();
-
       html += `
-                <div class = 'contenedor-padre'> 
+                <div class = 'contenedor-padre'>
                   <p class="name-post"> ${task.name} </p>
                   <p class="date">${task.createdDateTime.toDate().toLocaleString('es-ES', {
     year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
   })} </p>
                     <textarea class ='div-post-publicado'>${task.description}</textarea>`;
-
       if (task.uid === auth.currentUser.uid) {
         html += `
                         <img src="./images/editlogo2.png" class='btn-edit' data-id="${doc.id}">
-                        <img src="./images/deletelogo2.png" class='btn-delete' data-id="${doc.id}"> 
+                        <img src="./images/deletelogo2.png" class='btn-delete' data-id="${doc.id}">
                     <div class="contenedor-likes">
                         <img class="like-logo" data-id="${doc.id}" src='${likeSrc}' alt="heart">
                         <p class="contadorLikes" data-id="${doc.id}"> ${likesNumber}</p>
                     </div>
                 `;
       } else {
-        html += ` 
+        html += `
                      <div class="contenedor-likes">
                         <img class="like-logo" data-id="${doc.id}" src='${likeSrc}' alt="heart">
                         <p class="contadorLikes" data-id="${doc.id}"> ${likesNumber}</p>
@@ -57,12 +52,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                     `;
       }
     });
-
     tasksContainer.innerHTML = html;
-
     const userId = user().uid;
     const botonLike = tasksContainer.querySelectorAll('.like-logo');
-
     botonLike.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const id1 = e.target.dataset.id;
@@ -71,7 +63,6 @@ window.addEventListener('DOMContentLoaded', async () => {
         // console.log('doc', doc);
         const likes = doc.data().likes;
         const currentLike = likes.indexOf(userId);
-
         // console.log(likes);
         if (currentLike === -1) {
           tapLike(id1, userId);
@@ -80,7 +71,6 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       });
     });
-
     const btnsDelete = tasksContainer.querySelectorAll('.btn-delete');
     btnsDelete.forEach((btn) => {
       btn.addEventListener('click', ({ target: { dataset } }) => {
@@ -90,30 +80,23 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       });
     });
-
     const btnsEdit = tasksContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const doc = await getTask(e.target.dataset.id);
         // console.log(doc.data());
         const task = doc.data();
-
         taskForm['task-description'].value = task.description;
-
         editStatus = true;
         id = doc.id;
-
         taskForm['btn-publicar'].innerText = 'Publicar';
       });
     });
   });
 });
-
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const description = taskForm['task-description'];
-
   if (description.value.trim() === '') {
     // eslint-disable-next-line no-alert
     alert('No se pueden publicar campos vacíos :(');
@@ -124,44 +107,34 @@ taskForm.addEventListener('submit', (e) => {
       updateTask(id, {
         description: description.value,
       });
-
       editStatus = false;
     }
-
     taskForm.reset();
   }
 });
-
 /// /////
-
 //  html += `
 //  <div class = 'contenedor-padre'>`
 //  if(auth.currentUser.displayName === null) {
 //      ` <p class="name-post"> ${task.name} </p>`
 //  }else { html += `
 //   <p class="name-post"> ${task.name} </p>`
-
 // }
-
 // let displayName = task.name;
 //     if (!task.name) {
 //     displayName = document.getElementById('name-usuaria').value;
 //     }
-
 // let name = '';
 //     if (task.name) {
 //     name = task.name;
 //     } else if (document.getElementById("name-usuaria").value) {
 //     name = document.getElementById("name-usuaria").value;
 //     }
-
 //---------
 // let displayName = task.name;
-
 // html += `
 // <div class = 'contenedor-padre'>
 // `;
-
 // if (task.name === null) {
 // displayName = document.getElementById('name-usuaria').value;
 // html += `
