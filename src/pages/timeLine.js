@@ -67,7 +67,6 @@ export const timeLine = () => {
     });
   });
 
-
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#log-out').addEventListener('click', () => {
       console.log('botón cerrar sesión');
@@ -75,7 +74,6 @@ export const timeLine = () => {
       console.log('cerró sesión');
     });
   });
-
 
   return divTimeLine;
 };
