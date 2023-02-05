@@ -80,41 +80,33 @@ export const dateTask = (querySnapshot) => {
 
 // Create new users
 
-export function registerUser(email, password, name, pais, callback) {
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      updateProfile(auth.currentUser, {
-        displayName: name,
-
-      });
-      // El usuario ha sido registrado correctamente
-      // eslint-disable-next-line no-console
-      console.log('Usuario registrado correctamente');
-      const user = userCredential.user;
-      const userId = user.uid;
-      user.displayName = name;
-      // console.log(user, userId);
-      saveUser(user.displayName, userId, email, pais);
-      callback(true);
-    })
-    .catch((error) => {
-      console.error(error.code);
-      if (error.code === 'auth/email-already-in-use') {
-        alert('Este correo ya está registrado');
-      } else if (error.code === 'auth/weak-password') {
-        alert('Tu contraseña debe contener al menos 6 caracteres');
-      } else if (error.code === 'auth/invalid-email') {
-        alert('Este correo no existe o es inválido');
-      } else if (error.code === 'auth/internal-error') {
-        alert('Completa todos los campos');
-      }
-      callback(false);
-    })
-    .then(() => {
-      sendEmailVerification(auth.currentUser);
+export async function registerUser(email, password, name, pais) {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    await updateProfile(auth.currentUser, {
+      displayName: name,
     });
+    console.log('Usuario registrado correctamente');
+    const user = userCredential.user;
+    const userId = user.uid;
+    user.displayName = name;
+    await saveUser(user.displayName, userId, email, pais);
+    await sendEmailVerification(auth.currentUser);
+    return true;
+  } catch (error) {
+    console.error(error.code);
+    if (error.code === 'auth/email-already-in-use') {
+      alert('Este correo ya está registrado');
+    } else if (error.code === 'auth/weak-password') {
+      alert('Tu contraseña debe contener al menos 6 caracteres');
+    } else if (error.code === 'auth/invalid-email') {
+      alert('Este correo no existe o es inválido');
+    } else if (error.code === 'auth/internal-error') {
+      alert('Completa todos los campos');
+    }
+    return false;
+  }
 }
-
 // inicio de sesión con email
 export async function inicioDeSesionEmail(email, password) {
   try {
@@ -206,4 +198,5 @@ export {
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword,
+  sendEmailVerification,
 };

@@ -23,6 +23,7 @@ import {
   saveTask,
   saveUser,
   signOutFirebase,
+  
 } from '../src/firebase/configuracion.js';
   
 jest.mock('../src/firebase/configuracion.js', () => {
@@ -46,9 +47,7 @@ jest.mock('../src/firebase/configuracion.js', () => {
       }
       return Promise.resolve({ userCredential: 'admin' });
     }),
-    sendEmailVerification: jest.fn((auth) => {
-      if (!auth) return Promise.reject();
-    }),
+   
     updateProfile: jest.fn((displayName, auth) => {
       if (!auth || !displayName) return Promise.reject('no displayName or auth');
     }),
@@ -88,6 +87,24 @@ describe('Test for the inicioDeSesionEmail function', () => {
       expect(result).toBe(false);
     } catch (error) {
       expect(error).toBe('no auth parameter');
+    }
+  });
+});
+
+describe('Test for the registerUser function', () => {
+  const email = 'journeymates@test.com';
+  const password = 'journeymates123';
+  
+  it('Should call createUserWithEmailAndPassword', async () => {
+    await createUserWithEmailAndPassword(auth, email, password);
+    expect(createUserWithEmailAndPassword).toHaveBeenCalled();
+  });
+
+  it('createUserWithEmailAndPassword debe dar un correo que no existe o es inválido', async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      expect(error.message).toBe('Este correo no existe o es inválido');
     }
   });
 });
