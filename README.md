@@ -202,8 +202,8 @@ para interactuar con las publicaciones.
 
 * Prototipo de baja fidelidad
 
-![img](./src/images/Prototipo%20de%20baja_mobile.JPG)
-![img](./src/images/Prototipo%20de%20baja_desktop.JPG)
+[![Prototipo-de-baja-mobile-1.jpg](https://i.postimg.cc/ZY8WWStN/Prototipo-de-baja-mobile-1.jpg)](https://postimg.cc/DmzvNRzf)
+[![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
 
 * Prototipo de alta fidelidad
 
