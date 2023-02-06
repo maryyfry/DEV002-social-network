@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Social Network @ Laboratoria",
   "main": "src/index.html",
+  "author": "Daniela,Carmen,Miriam",
   "keywords": [
     "javascript",
     "firebase",
@@ -50,7 +51,6 @@
     "type": "git",
     "url": "git+https://github.com/dvnielx/DEV002-social-network.git"
   },
-  "author": "",
   "bugs": {
     "url": "https://github.com/dvnielx/DEV002-social-network/issues"
   },
