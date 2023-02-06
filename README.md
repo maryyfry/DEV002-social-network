@@ -207,10 +207,10 @@ para interactuar con las publicaciones.
 
 * Prototipo de alta fidelidad
 
-![img](./src/images/1.png)
-![img](./src/images/2.png)
-![img](./src/images/3.png)
-![img](./src/images/4.png)
+[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
+[![2.png](https://i.postimg.cc/zf0TyHLV/2.png)](https://postimg.cc/Z9vWgRxS)
+[![3.png](https://i.postimg.cc/3RqpBMFh/3.png)](https://postimg.cc/47zmfS02)
+[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
 
 
 ## iv. Consideraciones técnicas UX | Testeos de usablidad
