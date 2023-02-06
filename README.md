@@ -1,11 +1,18 @@
 Journey Mates 🛫
+
 Índice
 i. Acerca de "Journey Mates"
+
 ii. Historias de Usuario
+
 iii. Prototipos
+
 iv. Consideraciones técnicas UX
+
 v. Proyectos desplegados
+
 vi. Tests de usabilidad
+
 i. Acerca de Journey Mates
 El proyecto "Journey Mates" surge con la finalidad de brindar a las usuarias que disfrutan de viajar y conocer nuevos lugares en Latinoamerica, una red social en la cual, podrán compartir sus experiencias y recomendaciones, y descubrir a través de las recomendaciones de otras usuarias, nuevos lugares, ciudades y otros sitios de interés.
 
