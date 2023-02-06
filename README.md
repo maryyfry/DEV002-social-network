@@ -206,11 +206,10 @@ para interactuar con las publicaciones.
 [![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
 
 * Prototipo de alta fidelidad
-
-[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
+[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
 [![2.png](https://i.postimg.cc/zf0TyHLV/2.png)](https://postimg.cc/Z9vWgRxS)
 [![3.png](https://i.postimg.cc/3RqpBMFh/3.png)](https://postimg.cc/47zmfS02)
-[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
+[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
 
 
 ## iv. Consideraciones técnicas UX | Testeos de usablidad
