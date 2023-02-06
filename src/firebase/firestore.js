@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       const likes = task.likes;
       const likesNumber = likes.length;
       const userId = user().uid;
+      console.log(userId);
       const currentLike = likes.indexOf(userId);
       let likeSrc = '';
       const likeImg = () => {
@@ -85,15 +86,16 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       });
     });
-
     const btnsDelete = tasksContainer.querySelectorAll('.btn-delete');
-    btnsDelete.forEach((btn) => {
-      btn.addEventListener('click', ({ target: { dataset } }) => {
-        if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
-          deleteTask(dataset.id);
-        }
+    if (btnsDelete) {
+      btnsDelete.forEach((btn) => {
+        btn.addEventListener('click', ({ target: { dataset } }) => {
+          if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
+            deleteTask(dataset.id);
+          }
+        });
       });
-    });
+    }
 
     const btnsEdit = tasksContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
@@ -112,25 +114,26 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
   });
 });
+if (taskForm) {
+  taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-taskForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+    const description = taskForm['task-description'];
 
-  const description = taskForm['task-description'];
-
-  if (description.value.trim() === '') {
-    alert('No se pueden publicar campos vacíos :(');
-  } else {
-    if (!editStatus) {
-      saveTask(description.value);
+    if (description.value.trim() === '') {
+      alert('No se pueden publicar campos vacíos :(');
     } else {
-      updateTask(id, {
-        description: description.value,
-      });
+      if (!editStatus) {
+        saveTask(description.value);
+      } else {
+        updateTask(id, {
+          description: description.value,
+        });
 
-      editStatus = false;
+        editStatus = false;
+      }
+
+      taskForm.reset();
     }
-
-    taskForm.reset();
-  }
-});
+  });
+}
