@@ -1,6 +1,6 @@
 Journey Mates 🛫
 Índice
-i.. Acerca de "Journey Mates"
+i. Acerca de "Journey Mates"
 ii. Historias de Usuario
 iii. Prototipos
 iv. Consideraciones técnicas UX
