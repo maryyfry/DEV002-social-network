@@ -5,8 +5,9 @@
 * [i. Acerca de "Journey Mates"](#1-acerca-de-Journey_Mates)
 * [ii. Historias de Usuario](#2-historias-de-usuario)
 * [iii. Prototipos](#3-prototipos)
-* [iv. Consideraciones generales](#4-consideraciones-generales)
-* [v. Listado de problemas que detectaste a través de tests de usabilidad](#v-listado-de-problemas-que-detectaste-a-través-de-tests-de-usabilidad)
+* [iv. Consideraciones técnicas UX](#4-consideraciones-tecnicas-UX)
+* [v. Proyectos desplegados](#4-consideraciones-generales)
+* [vi. Tests de usabilidad](#v-listado-de-problemas-que-detectaste-a-través-de-tests-de-usabilidad)
 
 
 ***
@@ -163,7 +164,7 @@ para compartir en mi perfil lo que estoy haciendo.
 
     *El código pasa los tests necesarios.
 
-    *La página se puede abrir tanto en computadora como en dispositivos móviles y es funcional.![](https://github.com/dvnielx/DEV002-data-lovers/blob/main/src/images/Prototipos/HU%20Orden%20A-Z%20y%20HU%20Porcentajes.png)
+    *La página se puede abrir tanto en computadora como en dispositivos móviles y es funcional.
 
     *Puedes editar cada una de tus publicaciones a través de un botón de editar.
 
@@ -201,18 +202,29 @@ para interactuar con las publicaciones.
 
 * Prototipo de baja fidelidad
 
-![img](./src/images/)
-
+[![Prototipo-de-baja-mobile-1.jpg](https://i.postimg.cc/ZY8WWStN/Prototipo-de-baja-mobile-1.jpg)](https://postimg.cc/DmzvNRzf)
+[![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
 
 * Prototipo de alta fidelidad
+[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
+[![2.png](https://i.postimg.cc/zf0TyHLV/2.png)](https://postimg.cc/Z9vWgRxS)
+[![3.png](https://i.postimg.cc/3RqpBMFh/3.png)](https://postimg.cc/47zmfS02)
+[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
 
 
-## iv. Proyectos desplegados
+## iv. Consideraciones técnicas UX | Testeos de usablidad
 
-* 💻 Carmen: 
+* Usuaria #1:
+    Como usuaria de Journey Mates, considero que la interfaz es muy amigable. La idea detrás de la página es valiosa, ya que me permite compartir y leer recomendaciones y reseñas de otros viajeros. Además, la página es responsive, lo que significa que puedo abrirla tanto en mi computadora como en mi celular y sigue siendo funcional en ambos dispositivos. La navegación es clara y fácil de seguir, lo que hace que sea sencillo encontrar la información que estoy buscando. La interfaz de usuario es atractiva y la disposición de la información es clara y legible. En general, estoy muy contenta con la experiencia de usuario en Journey Mates.
+
+* Usuaria #2:
+    Como usuaria de Journey Mates, me gustó especialmente la funcionalidad de dar "like" a las recomendaciones y reseñas de otros viajeros, ya que me permite destacar aquellas que realmente me gustaron. Además, los colores elegidos para la página me parecen adecuados y ayudan a crear una atmósfera acogedora y amigable.
+
+    Sin embargo, me gustaría ver un mapa o imágenes en la página para hacerla más atractiva visualmente. Creo que sería una excelente manera de mostrar los diferentes países de las recomendaciones que se pueden encontrar en la página y hacer que sea más fácil para las usuarias visualizarlos. En general, estoy muy contenta con la experiencia de usuario en Journey Mates, pero creo que un mapa o imágenes añadirían un toque adicional de atractivo visual a la página.
+
+
+## v. Proyectos desplegados
+
 * 💻 Daniela:
+* 💻 Carmen: 
 * 💻 Miriam:
-
-
-## v. Tests de usabilidad
-

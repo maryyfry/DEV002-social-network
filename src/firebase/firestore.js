@@ -1,3 +1,6 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-console */
 // import { async } from 'regenerator-runtime';
 import {
   saveTask, deleteTask, getTask, updateTask, tapLike, dislike, user, auth, dateTask,
@@ -16,6 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       const likes = task.likes;
       const likesNumber = likes.length;
       const userId = user().uid;
+      console.log(userId);
       const currentLike = likes.indexOf(userId);
       let likeSrc = '';
       const likeImg = () => {
@@ -26,6 +30,9 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       };
       likeImg();
+
+      // console.log(auth.currentUser);
+
       html += `
                 <div class = 'contenedor-padre'>
                   <p class="name-post"> ${task.name} </p>
@@ -58,12 +65,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     botonLike.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const id1 = e.target.dataset.id;
-        // console.log('id', id1);
+        console.log('id', id1);
         const doc = await getTask(id1);
-        // console.log('doc', doc);
+        console.log('doc', doc);
         const likes = doc.data().likes;
         const currentLike = likes.indexOf(userId);
-        // console.log(likes);
+
+        console.log(likes);
         if (currentLike === -1) {
           tapLike(id1, userId);
         } else {
@@ -72,19 +80,21 @@ window.addEventListener('DOMContentLoaded', async () => {
       });
     });
     const btnsDelete = tasksContainer.querySelectorAll('.btn-delete');
-    btnsDelete.forEach((btn) => {
-      btn.addEventListener('click', ({ target: { dataset } }) => {
-        // eslint-disable-next-line no-restricted-globals, no-alert
-        if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
-          deleteTask(dataset.id);
-        }
+    if (btnsDelete) {
+      btnsDelete.forEach((btn) => {
+        btn.addEventListener('click', ({ target: { dataset } }) => {
+          if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
+            deleteTask(dataset.id);
+          }
+        });
       });
-    });
+    }
+
     const btnsEdit = tasksContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const doc = await getTask(e.target.dataset.id);
-        // console.log(doc.data());
+        console.log(doc.data());
         const task = doc.data();
         taskForm['task-description'].value = task.description;
         editStatus = true;
@@ -94,51 +104,26 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
   });
 });
-taskForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const description = taskForm['task-description'];
-  if (description.value.trim() === '') {
-    // eslint-disable-next-line no-alert
-    alert('No se pueden publicar campos vacíos :(');
-  } else {
-    if (!editStatus) {
-      saveTask(description.value);
+if (taskForm) {
+  taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const description = taskForm['task-description'];
+
+    if (description.value.trim() === '') {
+      alert('No se pueden publicar campos vacíos :(');
     } else {
-      updateTask(id, {
-        description: description.value,
-      });
-      editStatus = false;
+      if (!editStatus) {
+        saveTask(description.value);
+      } else {
+        updateTask(id, {
+          description: description.value,
+        });
+
+        editStatus = false;
+      }
+
+      taskForm.reset();
     }
-    taskForm.reset();
-  }
-});
-/// /////
-//  html += `
-//  <div class = 'contenedor-padre'>`
-//  if(auth.currentUser.displayName === null) {
-//      ` <p class="name-post"> ${task.name} </p>`
-//  }else { html += `
-//   <p class="name-post"> ${task.name} </p>`
-// }
-// let displayName = task.name;
-//     if (!task.name) {
-//     displayName = document.getElementById('name-usuaria').value;
-//     }
-// let name = '';
-//     if (task.name) {
-//     name = task.name;
-//     } else if (document.getElementById("name-usuaria").value) {
-//     name = document.getElementById("name-usuaria").value;
-//     }
-//---------
-// let displayName = task.name;
-// html += `
-// <div class = 'contenedor-padre'>
-// `;
-// if (task.name === null) {
-// displayName = document.getElementById('name-usuaria').value;
-// html += `
-//     <p class="name-post"> ${displayName} </p>`;
-// } else {
-// html += `
-//     <p class="name-post"> ${task.name} </p>
+  });
+}

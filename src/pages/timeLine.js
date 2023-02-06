@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable import/no-cycle */
 import { signOutFirebase, auth } from '../firebase/configuracion.js';
@@ -51,6 +52,7 @@ export const timeLine = () => {
         <div class="contenedor-publicaciones2" id="contenedor-publicaciones">
     </div>
     </section>
+    
 `;
   divTimeLine.innerHTML = viewTimeLine;
   document.addEventListener('DOMContentLoaded', () => {
@@ -60,6 +62,7 @@ export const timeLine = () => {
       console.log('cerró sesión');
     });
   });
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#log-out').addEventListener('click', () => {
       console.log('botón cerrar sesión');
@@ -67,5 +70,6 @@ export const timeLine = () => {
       console.log('cerró sesión');
     });
   });
+
   return divTimeLine;
 };
