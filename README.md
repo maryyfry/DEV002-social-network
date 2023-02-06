@@ -202,15 +202,14 @@ para interactuar con las publicaciones.
 
 * Prototipo de baja fidelidad
 
-![img](./src/images/Prototipo%20de%20baja_mobile.JPG)
-![img](./src/images/Prototipo%20de%20baja_desktop.JPG)
+[![Prototipo-de-baja-mobile-1.jpg](https://i.postimg.cc/ZY8WWStN/Prototipo-de-baja-mobile-1.jpg)](https://postimg.cc/DmzvNRzf)
+[![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
 
 * Prototipo de alta fidelidad
-
-![img](./src/images/1.png)
-![img](./src/images/2.png)
-![img](./src/images/3.png)
-![img](./src/images/4.png)
+[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
+[![2.png](https://i.postimg.cc/zf0TyHLV/2.png)](https://postimg.cc/Z9vWgRxS)
+[![3.png](https://i.postimg.cc/3RqpBMFh/3.png)](https://postimg.cc/47zmfS02)
+[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
 
 
 ## iv. Consideraciones técnicas UX | Testeos de usablidad
