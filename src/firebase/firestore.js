@@ -8,18 +8,20 @@ import {
 
 const tasksContainer = document.getElementById('contenedor-publicaciones');
 const taskForm = document.getElementById('task-form');
+
 let editStatus = false;
 let id = '';
+
 window.addEventListener('DOMContentLoaded', async () => {
   dateTask((querySnapshot) => {
     let html = '';
+
     querySnapshot.forEach((doc) => {
       const task = doc.data();
       // const fecha=Timestamp.fromDate(new Date())
       const likes = task.likes;
       const likesNumber = likes.length;
       const userId = user().uid;
-      console.log(userId);
       const currentLike = likes.indexOf(userId);
       let likeSrc = '';
       const likeImg = () => {
@@ -34,23 +36,24 @@ window.addEventListener('DOMContentLoaded', async () => {
       // console.log(auth.currentUser);
 
       html += `
-                <div class = 'contenedor-padre'>
+                <div class = 'contenedor-padre'> 
                   <p class="name-post"> ${task.name} </p>
                   <p class="date">${task.createdDateTime.toDate().toLocaleString('es-ES', {
     year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
   })} </p>
                     <textarea class ='div-post-publicado'>${task.description}</textarea>`;
+
       if (task.uid === auth.currentUser.uid) {
         html += `
                         <img src="./images/editlogo2.png" class='btn-edit' data-id="${doc.id}">
-                        <img src="./images/deletelogo2.png" class='btn-delete' data-id="${doc.id}">
+                        <img src="./images/deletelogo2.png" class='btn-delete' data-id="${doc.id}"> 
                     <div class="contenedor-likes">
                         <img class="like-logo" data-id="${doc.id}" src='${likeSrc}' alt="heart">
                         <p class="contadorLikes" data-id="${doc.id}"> ${likesNumber}</p>
                     </div>
                 `;
       } else {
-        html += `
+        html += ` 
                      <div class="contenedor-likes">
                         <img class="like-logo" data-id="${doc.id}" src='${likeSrc}' alt="heart">
                         <p class="contadorLikes" data-id="${doc.id}"> ${likesNumber}</p>
@@ -59,9 +62,12 @@ window.addEventListener('DOMContentLoaded', async () => {
                     `;
       }
     });
+
     tasksContainer.innerHTML = html;
+
     const userId = user().uid;
     const botonLike = tasksContainer.querySelectorAll('.like-logo');
+
     botonLike.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const id1 = e.target.dataset.id;
@@ -79,16 +85,15 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
       });
     });
+
     const btnsDelete = tasksContainer.querySelectorAll('.btn-delete');
-    if (btnsDelete) {
-      btnsDelete.forEach((btn) => {
-        btn.addEventListener('click', ({ target: { dataset } }) => {
-          if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
-            deleteTask(dataset.id);
-          }
-        });
+    btnsDelete.forEach((btn) => {
+      btn.addEventListener('click', ({ target: { dataset } }) => {
+        if (confirm('¿Estás segura de que deseas eliminar esta publicación?')) {
+          deleteTask(dataset.id);
+        }
       });
-    }
+    });
 
     const btnsEdit = tasksContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
@@ -96,34 +101,36 @@ window.addEventListener('DOMContentLoaded', async () => {
         const doc = await getTask(e.target.dataset.id);
         console.log(doc.data());
         const task = doc.data();
+
         taskForm['task-description'].value = task.description;
+
         editStatus = true;
         id = doc.id;
+
         taskForm['btn-publicar'].innerText = 'Publicar';
       });
     });
   });
 });
-if (taskForm) {
-  taskForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    const description = taskForm['task-description'];
+taskForm.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-    if (description.value.trim() === '') {
-      alert('No se pueden publicar campos vacíos :(');
+  const description = taskForm['task-description'];
+
+  if (description.value.trim() === '') {
+    alert('No se pueden publicar campos vacíos :(');
+  } else {
+    if (!editStatus) {
+      saveTask(description.value);
     } else {
-      if (!editStatus) {
-        saveTask(description.value);
-      } else {
-        updateTask(id, {
-          description: description.value,
-        });
+      updateTask(id, {
+        description: description.value,
+      });
 
-        editStatus = false;
-      }
-
-      taskForm.reset();
+      editStatus = false;
     }
-  });
-}
+
+    taskForm.reset();
+  }
+});
