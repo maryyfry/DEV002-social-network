@@ -187,80 +187,9 @@ Usuaria #1: Como usuaria de Journey Mates, considero que la interfaz es muy amig
 
 Usuaria #2: Como usuaria de Journey Mates, me gustó especialmente la funcionalidad de dar "like" a las recomendaciones y reseñas de otros viajeros, ya que me permite destacar aquellas que realmente me gustaron. Además, los colores elegidos para la página me parecen adecuados y ayudan a crear una atmósfera acogedora y amigable.
 
-<<<<<<< HEAD
-    *Debe ser una SPA.
-
-    *El código pasa los tests necesarios.
-
-    *La página se puede abrir tanto en computadora como en dispositivos móviles y es funcional.
-
-    *Puedes editar cada una de tus publicaciones a través de un botón de editar.
-
-    *Tu estado se publica nuevamente y al recargar la página se muestra editado.
-
-    *Al guardar los cambios debe cambiar de vuelta a un texto normal pero con la información editada.
-
-7. **HU | Likear:** Yo como viajera quiero poder dar y quitar like a las publicaciones. 
-para interactuar con las publicaciones.
-
-**Criterios de aceptación:** 
-
-    *La página tiene que ser responsive.
-
-    *Existe un botón/logo que al momento de dar click, muestra un like y cambia de color.
-
-    *Se puede quitar el like de la publicación.
-
-    *Existe un conteo de likes.
-
-    *Fiel a prototipo.
-
-**Definición de terminado:**
-
-    *Debe ser una SPA.
-
-    *El código pasa los tests necesarios.
-
-    *La página se puede abrir tanto en computadora como en dispositivos móviles y es funcional.
-
-    *Cada publicación cuenta con un logo que al momento de darle click, se agrega un like al conteo.
-
-
-## iii. Prototipos
-
-* Prototipo de baja fidelidad
-
-[![Prototipo-de-baja-mobile-1.jpg](https://i.postimg.cc/ZY8WWStN/Prototipo-de-baja-mobile-1.jpg)](https://postimg.cc/DmzvNRzf)
-[![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
-
-* Prototipo de alta fidelidad
-[![4.png](https://i.postimg.cc/50yLL9vp/4.png)](https://postimg.cc/ygqDzHLS)
-[![2.png](https://i.postimg.cc/zf0TyHLV/2.png)](https://postimg.cc/Z9vWgRxS)
-[![3.png](https://i.postimg.cc/3RqpBMFh/3.png)](https://postimg.cc/47zmfS02)
-[![1.png](https://i.postimg.cc/fR7chrD7/1.png)](https://postimg.cc/w1vyXFt3)
-
-
-## iv. Consideraciones técnicas UX | Testeos de usablidad
-
-* Usuaria #1:
-    Como usuaria de Journey Mates, considero que la interfaz es muy amigable. La idea detrás de la página es valiosa, ya que me permite compartir y leer recomendaciones y reseñas de otros viajeros. Además, la página es responsive, lo que significa que puedo abrirla tanto en mi computadora como en mi celular y sigue siendo funcional en ambos dispositivos. La navegación es clara y fácil de seguir, lo que hace que sea sencillo encontrar la información que estoy buscando. La interfaz de usuario es atractiva y la disposición de la información es clara y legible. En general, estoy muy contenta con la experiencia de usuario en Journey Mates.
-
-* Usuaria #2:
-    Como usuaria de Journey Mates, me gustó especialmente la funcionalidad de dar "like" a las recomendaciones y reseñas de otros viajeros, ya que me permite destacar aquellas que realmente me gustaron. Además, los colores elegidos para la página me parecen adecuados y ayudan a crear una atmósfera acogedora y amigable.
-
-    Sin embargo, me gustaría ver un mapa o imágenes en la página para hacerla más atractiva visualmente. Creo que sería una excelente manera de mostrar los diferentes países de las recomendaciones que se pueden encontrar en la página y hacer que sea más fácil para las usuarias visualizarlos. En general, estoy muy contenta con la experiencia de usuario en Journey Mates, pero creo que un mapa o imágenes añadirían un toque adicional de atractivo visual a la página.
-
-
-## v. Proyectos desplegados
-
-* 💻 Daniela:
-* 💻 Carmen: 
-* 💻 Miriam:
-=======
 Sin embargo, me gustaría ver un mapa o imágenes en la página para hacerla más atractiva visualmente. Creo que sería una excelente manera de mostrar los diferentes países de las recomendaciones que se pueden encontrar en la página y hacer que sea más fácil para las usuarias visualizarlos. En general, estoy muy contenta con la experiencia de usuario en Journey Mates, pero creo que un mapa o imágenes añadirían un toque adicional de atractivo visual a la página.
 
 v. Proyectos desplegados
 💻 Daniela:
 💻 Carmen:
 💻 Miriam:
->>>>>>> 1c3d3c77f56fb00f1438ab92b151cdbcf614b53d
