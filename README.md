@@ -1,29 +1,15 @@
-Journey Mates 🛫
-
-Índice
-i. Acerca de "Journey Mates"
-
-* [i. Acerca de "Journey Mates"](#1-acerca-de-Journey_Mates)
-* [ii. Historias de Usuario](#2-historias-de-usuario)
-* [iii. Prototipos](#3-prototipos)
-* [iv. Consideraciones técnicas UX](#4-consideraciones-tecnicas-UX)
-* [v. Proyectos desplegados](#4-consideraciones-generales)
-* [vi. Tests de usabilidad](#v-listado-de-problemas-que-detectaste-a-través-de-tests-de-usabilidad)
-
-iii. Prototipos
-
-iv. Consideraciones técnicas UX
-
-v. Proyectos desplegados
-
-vi. Tests de usabilidad
-
-i. Acerca de Journey Mates
-El proyecto "Journey Mates" surge con la finalidad de brindar a las usuarias que disfrutan de viajar y conocer nuevos lugares en Latinoamerica, una red social en la cual, podrán compartir sus experiencias y recomendaciones, y descubrir a través de las recomendaciones de otras usuarias, nuevos lugares, ciudades y otros sitios de interés.
-
-ii. Historias de Usuario
+# Journey Mates 🛫
+## Índice
+* [i. Acerca de "Journey Mates"](#i-acerca-de-Journey-Mates)
+* [ii. Historias de Usuario](#ii-historias-de-usuario)
+* [iii. Prototipos](#iii-prototipos)
+* [iv. Consideraciones técnicas UX](#iv-consideraciones-tecnicas-UX)
+* [v. Proyectos desplegados](#v-proyectos-desplegados)
+***
+## i. Acerca de Journey Mates
+El proyecto _"Journey Mates"_ surge con la finalidad de brindar a las usuarias que disfrutan de viajar y conocer nuevos lugares en Latinoamerica, una red social en la cual, podrán compartir sus experiencias y recomendaciones, y descubrir a través de las recomendaciones de otras usuarias, nuevos lugares, ciudades y otros sitios de interés.
+## ii. Historias de Usuario
 Las historias de usuario las realizamos en función de los hallazgos de una investigación con personas que disfrutan de viajar.
-
 Nuestras Historias de Usuario fueron 8:
 
 ** HU | Crear Cuenta:** Como viajera, quiero registrarme en JourneyMates para crear un perfil.
