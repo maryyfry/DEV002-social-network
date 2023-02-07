@@ -3,16 +3,12 @@ Journey Mates 🛫
 Índice
 i. Acerca de "Journey Mates"
 
-<<<<<<< HEAD
 * [i. Acerca de "Journey Mates"](#1-acerca-de-Journey_Mates)
 * [ii. Historias de Usuario](#2-historias-de-usuario)
 * [iii. Prototipos](#3-prototipos)
 * [iv. Consideraciones técnicas UX](#4-consideraciones-tecnicas-UX)
 * [v. Proyectos desplegados](#4-consideraciones-generales)
 * [vi. Tests de usabilidad](#v-listado-de-problemas-que-detectaste-a-través-de-tests-de-usabilidad)
-=======
-ii. Historias de Usuario
->>>>>>> 1c3d3c77f56fb00f1438ab92b151cdbcf614b53d
 
 iii. Prototipos
 
