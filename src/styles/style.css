@@ -261,38 +261,8 @@ li {
     cursor: pointer;
 }
 
-p {
-    padding: 1px;
-}
-
-/* .user-logo-publicaciones2 {
-    width: 5rem;
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-} */
-
-/* .input-publicacion{
-    height: 5rem;
-    width: 24rem;
-    font-size: 14px;
-    margin-left: 1rem;
-    margin-top: 0;
-    color: #35123C;
-} */
-
-/* .edit-logo{
-    width: 1rem;
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.delete-logo{
-    width: 1rem;
-    cursor: pointer;
-} */
-
-
- /*Perfil*/
+p { 
+    padding: 1px;}
 
  .foto-perfil {
     text-align: center;

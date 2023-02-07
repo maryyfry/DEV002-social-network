@@ -98,42 +98,42 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // Editar tareas
 
-    const btnsEdit = tasksContainer.querySelectorAll('.btn-edit');
+    const btnsEdit = tasksContainer.querySelectorAll('.btn-edit'); // Se seleccionan todos los botones de edición que se encuentren dentro del elemento tasksContainer.
     btnsEdit.forEach((btn) => {
-      btn.addEventListener('click', async (e) => {
-        const doc = await getTask(e.target.dataset.id);
+      btn.addEventListener('click', async (e) => { // Para cada botón se agrega un evento "click":
+        const doc = await getTask(e.target.dataset.id); // Se llama la función getTask para obtener la publicación que se desea editar.
         console.log(doc.data());
-        const task = doc.data();
+        const task = doc.data();// A partir del documento obtenido, se extraen los datos de la publicación y se asignan a una variable task
 
-        taskForm['task-description'].value = task.description;
+        taskForm['task-description'].value = task.description;// Se asigna el valor de la descripción de la publicación al input.
 
-        editStatus = true;
-        id = doc.id;
+        editStatus = true;// Se cambia el estado de la variable a true
+        id = doc.id;// y se guarda el id del documento para despues usarlo
 
-        taskForm['btn-publicar'].innerText = 'Publicar';
+        taskForm['btn-publicar'].innerText = 'Publicar'; // Finalmente, se cambia el texto del botón de publicación en el formulario.
       });
     });
   });
 });
 
-taskForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+taskForm.addEventListener('submit', (e) => { // controlador de eventos para un formulario "taskForm"
+  e.preventDefault(); // Previene la acción del formulario de enviarse con preventDefault
 
-  const description = taskForm['task-description'];
+  const description = taskForm['task-description']; // Obtiene el valor del campo "task-description".
 
-  if (description.value.trim() === '') {
-    alert('No se pueden publicar campos vacíos :(');
+  if (description.value.trim() === '') { // se verifica si el valor de "description" está vacío o no
+    alert('No se pueden publicar campos vacíos :('); // Si está vacío, se muestra una alerta
   } else {
-    if (!editStatus) {
-      saveTask(description.value);
+    if (!editStatus) { // Si el valor no está vacío, entonces se verifica si "editStatus" es falsa o no con if
+      saveTask(description.value);// Si es falsa, se llama a la función "saveTask" y se le pasa el valor de "description".
     } else {
-      updateTask(id, {
+      updateTask(id, { // Si "editStatus" es verdadera, entonces se llama a la función "updateTask" y se le pasa "id" y "description"
         description: description.value,
       });
 
       editStatus = false;
     }
 
-    taskForm.reset();
+    taskForm.reset();// Finalmente, se establece "editStatus"  false y se reinicia el formulario con taskForm.reset().
   }
 });
