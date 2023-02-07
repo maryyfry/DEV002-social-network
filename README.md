@@ -1,4 +1,4 @@
-# Journey Mates :avión_despegando:
+# Journey Mates 🛫
 ## Índice
 * [i. Acerca de "Journey Mates"](#i-acerca-de-Journey-Mates)
 * [ii. Historias de Usuario](#ii-historias-de-usuario)
