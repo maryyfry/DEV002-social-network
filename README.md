@@ -1,16 +1,15 @@
-Journey Mates 🛫
-Índice
-i. Acerca de "Journey Mates"
-ii. Historias de Usuario
-iii. Prototipos
-iv. Consideraciones técnicas UX
-v. Proyectos desplegados
-i. Acerca de Journey Mates
-El proyecto "Journey Mates" surge con la finalidad de brindar a las usuarias que disfrutan de viajar y conocer nuevos lugares en Latinoamerica, una red social en la cual, podrán compartir sus experiencias y recomendaciones, y descubrir a través de las recomendaciones de otras usuarias, nuevos lugares, ciudades y otros sitios de interés.
-
-ii. Historias de Usuario
+# Journey Mates 🛫
+## Índice
+* [i. Acerca de "Journey Mates"](#i-acerca-de-Journey-Mates)
+* [ii. Historias de Usuario](#ii-historias-de-usuario)
+* [iii. Prototipos](#iii-prototipos)
+* [iv. Consideraciones técnicas UX](#iv-consideraciones-tecnicas-UX)
+* [v. Proyectos desplegados](#v-proyectos-desplegados)
+***
+## i. Acerca de Journey Mates
+El proyecto _"Journey Mates"_ surge con la finalidad de brindar a las usuarias que disfrutan de viajar y conocer nuevos lugares en Latinoamerica, una red social en la cual, podrán compartir sus experiencias y recomendaciones, y descubrir a través de las recomendaciones de otras usuarias, nuevos lugares, ciudades y otros sitios de interés.
+## ii. Historias de Usuario
 Las historias de usuario las realizamos en función de los hallazgos de una investigación con personas que disfrutan de viajar.
-
 Nuestras Historias de Usuario fueron 8:
 
 ** HU | Crear Cuenta:** Como viajera, quiero registrarme en JourneyMates para crear un perfil.
@@ -163,12 +162,13 @@ Definición de terminado:
 *Cada publicación cuenta con un logo que al momento de darle click, se agrega un like al conteo.
 iii. Prototipos
 Prototipo de baja fidelidad
-img img
+[![Prototipo-de-baja-mobile-1.jpg](https://i.postimg.cc/ZY8WWStN/Prototipo-de-baja-mobile-1.jpg)](https://postimg.cc/DmzvNRzf)
+[![Prototipo-de-baja-desktop.jpg](https://i.postimg.cc/TwQBs15m/Prototipo-de-baja-desktop.jpg)](https://postimg.cc/0MMtM8f2)
 
 Prototipo de alta fidelidad
 img img img img
 
-iv. Consideraciones técnicas UX
+iv. Consideraciones técnicas UX | Testeos de usablidad
 Usuaria #1: Como usuaria de Journey Mates, considero que la interfaz es muy amigable. La idea detrás de la página es valiosa, ya que me permite compartir y leer recomendaciones y reseñas de otros viajeros. Además, la página es responsive, lo que significa que puedo abrirla tanto en mi computadora como en mi celular y sigue siendo funcional en ambos dispositivos. La navegación es clara y fácil de seguir, lo que hace que sea sencillo encontrar la información que estoy buscando. La interfaz de usuario es atractiva y la disposición de la información es clara y legible. En general, estoy muy contenta con la experiencia de usuario en Journey Mates.
 
 Usuaria #2: Como usuaria de Journey Mates, me gustó especialmente la funcionalidad de dar "like" a las recomendaciones y reseñas de otros viajeros, ya que me permite destacar aquellas que realmente me gustaron. Además, los colores elegidos para la página me parecen adecuados y ayudan a crear una atmósfera acogedora y amigable.
@@ -176,6 +176,6 @@ Usuaria #2: Como usuaria de Journey Mates, me gustó especialmente la funcionali
 Sin embargo, me gustaría ver un mapa o imágenes en la página para hacerla más atractiva visualmente. Creo que sería una excelente manera de mostrar los diferentes países de las recomendaciones que se pueden encontrar en la página y hacer que sea más fácil para las usuarias visualizarlos. En general, estoy muy contenta con la experiencia de usuario en Journey Mates, pero creo que un mapa o imágenes añadirían un toque adicional de atractivo visual a la página.
 
 v. Proyectos desplegados
-💻 Daniela: https://journey-mates.netlify.app/
-💻 Carmen: https://journey-mates.netlify.app/
-💻 Miriam: https://journey-mates.netlify.app/
+💻 Daniela:
+💻 Carmen:
+💻 Miriam:
